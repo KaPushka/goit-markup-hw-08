@@ -1,0 +1,78 @@
+.subscription {
+    margin-left: 94px;
+}
+
+.sub-label {
+    display: flex;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.sub {
+    display: flex;
+}
+
+.sub-input {
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--white-color);
+    transition: border-color 250ms var(--timing-function), outline 250ms var(--timing-function);
+
+    &:focus {
+        outline: none;
+        border-color: var(--button-bg-color);
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.sub-button {
+    position: relative;
+
+}
+
+.sub-btn {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    padding-left: 28px;
+    margin-left: 12px;
+    background-color: var(--button-bg-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    border-color: transparent;
+    cursor: pointer;
+    @include font (16px, 700, 30px);
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        background-color: var(--hover-focus-btn-bg-color);
+    }
+}
+
+.sub-icon {
+    margin-left: 10px;
+}

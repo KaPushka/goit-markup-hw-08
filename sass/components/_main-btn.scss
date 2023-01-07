@@ -1,0 +1,19 @@
+.main-btn {
+    min-width: 216px;
+    min-height: 50px;
+    padding: 10px 32px;
+    font-family: inherit;
+    @include font (16px, 700, 30px);
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    color: var(--white-color);
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 4px;
+    transition: background-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--hover-focus-btn-bg-color);
+    }
+}

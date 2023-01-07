@@ -1,0 +1,9 @@
+.main-title {
+    width: 696px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    @include font (44px, 900, 60px);
+    letter-spacing: 0.06em;
+    color: var(--white-color);
+    text-transform: uppercase;
+}

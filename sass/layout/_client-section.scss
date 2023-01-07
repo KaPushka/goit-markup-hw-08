@@ -1,0 +1,38 @@
+.client-list {
+    display: flex;
+}
+
+.client-list-item {
+    display: block;
+    width: 170px;
+    height: 92px;
+
+    &:not(:last-child) {
+        margin-right: 30px;
+    }
+}
+
+.client-list-link {
+    display: flex;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    transition: border-color 250ms var(--timing-function);
+
+    &:hover,
+    &:focus {
+        outline: none;
+        border-color: #2196F3;
+    }
+}
+
+.client-icon {
+    margin: 16px 32px;
+    fill: #AFB1B8;
+    transition: fill 250ms var(--timing-function);
+
+    .client-list-link:hover &,
+    .client-list-link:focus & {
+        outline: none;
+        fill: #2196F3;
+    }
+}

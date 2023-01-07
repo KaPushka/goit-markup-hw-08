@@ -1,0 +1,16 @@
+.gallery-nav {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gallery-nav-list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.gallery-nav-list-item:not(:last-child) {
+    margin-right: 8px;
+}

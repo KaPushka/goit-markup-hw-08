@@ -1,0 +1,37 @@
+.about-hero {
+    display: flex;
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.about-hero-card {
+    flex-basis: calc((100% - 120px)/4);
+    margin-left: 30px;
+    margin-top: 30px;
+
+    &::before {
+        content: "";
+        display: block;
+        height: 120px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #F5F4FA;
+        margin-bottom: 30px;
+    }
+}
+
+.icon-antenna::before {
+    background-image: url("../images/antenna.svg");
+}
+
+.icon-clock::before {
+    background-image: url("../images/clock.svg");
+}
+
+.icon-diagram::before {
+    background-image: url("../images/diagram.svg");
+}
+
+.icon-astronaut::before {
+    background-image: url("../images/astronaut.svg");
+}
