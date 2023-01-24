@@ -7,8 +7,22 @@
     margin-right: auto;
     background-color: var(--bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
+            rgba(47, 48, 58, 0.4)), url('../images/Img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+@media screen and (max-width: 767px) {
+    .hero-section {
+        padding: 120px 0;
+        height: 400px;
+        max-width: 768px;
+    }
+    
+}
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero-section {
+        background-image: url('../images/retina/index/desktop/header-desktop@2x.jpg');
+    }
 }

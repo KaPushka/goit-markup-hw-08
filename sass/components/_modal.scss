@@ -9,10 +9,16 @@
     opacity: 1;
     transition: transform 250ms var(--timing-function), scale 250ms var(--timing-function), opacity 250ms var(--timing-function);
 
+    @media screen and (max-width: 767px) {
+        width: 450px;
+        
+    }
+
     .backdrop.is-hidden & {
         transform: translate(50%, 50%) scale(5);
         opacity: 0;
     }
+
 }
 
 .modal-close-btn {

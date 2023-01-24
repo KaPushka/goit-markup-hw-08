@@ -4,7 +4,9 @@
 
 @import "./base/common";
 @import "./base/container";
- 
+
+@import "./components/mobile-menu";
+@import "./components/mobile-menu-btn";
 @import "./components/main-btn";
 @import "./components/main-title";
 @import "./components/section-title";
@@ -16,6 +18,12 @@
 @import "./components/backdrop";
 @import "./components/modal";
 @import "./components/contact-form";
+@import "./components/gallery-nav";
+@import "./components/gallery-btn-list";
+@import "./components/gallery-card";
+@import "./components/gallery-content-wrapper";
+@import "./components/project";
+@import "./components/sliding";
 
 
 @import "./layout/header";

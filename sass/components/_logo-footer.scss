@@ -1,3 +1,9 @@
+@media screen and (max-width: 767px) {
+    .logo-footer {
+        text-align: center;
+    }
+}
+
 .logo-footer {
     display: block;
     margin-bottom: 20px;
@@ -6,8 +12,16 @@
     font-size: 26px;
     letter-spacing: 0.03em;
     color: var(--button-bg-color);
+
 }
 
+// @media screen and (max-width: 479px) {
+//     .logo-footer {
+//         display: block;
+//         margin-left: auto;
+//         margin-right: auto;
+//     }
+// }
 .logo-part-footer {
     color: var(--white-color);
 }

@@ -11,7 +11,14 @@
 
     .gallery-card:hover & {
         transform: translateY(-295px);
+
+        @media screen and (max-width: 767px) {
+            transform: translateY(-357px);
+        }
     }
+
+    
+    
 }
 
 .sliding-text {
@@ -22,4 +29,9 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
     background: rgba(33, 150, 243, 0.9);
+
+    @media screen and (max-width: 767px) {
+        width: 450px;
+        height: 357px;
+    }
 }

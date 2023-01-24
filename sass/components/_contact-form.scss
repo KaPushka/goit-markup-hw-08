@@ -4,6 +4,14 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
+
+    @media screen and (min-width: 480px) {
+        @include font (20px, 700, 30px)
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 370px;
+    }
 }
 
 .contact-form-field {
@@ -29,6 +37,10 @@
     &:focus {
         outline: none;
         border-color: var(--hover-focus-btn-bg-color);
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 370px;
     }
 }
 
@@ -72,6 +84,10 @@
         letter-spacing: 0.01em;
         color: rgba(117, 117, 117, 0.5);
     }   
+
+    @media screen and (max-width: 767px) {
+        width: 370px;
+    }
 }
 
 .contact-form-checkbox-wrapper {
@@ -79,6 +95,10 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
 }
 
 .contact-form-checkbox {
@@ -120,6 +140,10 @@
             outline: 2px solid rgba(0, 0, 255, 0.5);
         }
     }
+
+    @media screen and (max-width: 767px) {
+        @include font (12px, 400, 14px)
+    }
 }
 
 .contact-form-link {
@@ -127,6 +151,10 @@
     @include font (14px, 400, 24px);
     letter-spacing: 0.03em;
     color: #2196F3;
+
+    @media screen and (max-width: 767px) {
+        @include font (12px, 400, 14px)
+    }
 }
 
 .contact-form-submit-btn {
@@ -150,3 +178,13 @@
         border-radius: 4px;
     }
 }
+
+@media screen and (max-width: 1199px) {}
+
+@media screen and (max-width: 767px) {
+    .contact-form {
+        width: 470px;
+    }
+}
+
+@media screen and (max-width: 479px) {}   

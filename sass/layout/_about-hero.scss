@@ -1,24 +1,86 @@
-.about-hero {
-    display: flex;
-    margin-left: -30px;
-    margin-top: -30px;
+@media screen and (min-width: 768px) {
+    .about-hero-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+    .about-hero-card {
+        
+        width: calc((100% - 4 * 15px) / 2);
+        margin: 0 15px 30px 15px;
+    
+
+        &::before {
+            content: "";
+            display: block;
+            height: 120px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #F5F4FA;
+            margin-bottom: 30px;
+        }
+
+        .section-list-title {
+            text-align: left;
+        }
+    }
+
 }
 
-.about-hero-card {
-    flex-basis: calc((100% - 120px)/4);
-    margin-left: 30px;
-    margin-top: 30px;
-
-    &::before {
-        content: "";
-        display: block;
-        height: 120px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #F5F4FA;
-        margin-bottom: 30px;
+@media screen and (min-width: 1200px) {
+    .about-hero-list {
+        flex-wrap: nowrap;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .about-hero-card {
+        margin-top: 30px;
+    
+        &::before {
+            content: "";
+            display: block;
+            height: 120px;
+            background-color: var(--btn-bg-color);
+            background-repeat: no-repeat;
+            background-position: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    .section-list-title {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+    }
+}
+
+
+// .about-hero {
+//     display: flex;
+//     margin-left: -30px;
+//     margin-top: -30px;
+// }
+
+// .about-hero-card {
+//     flex-basis: calc((100% - 120px)/4);
+//     margin-left: 30px;
+//     margin-top: 30px;
+
+//     &::before {
+//         content: "";
+//         display: block;
+//         height: 120px;
+//         background-repeat: no-repeat;
+//         background-position: center;
+//         background-color: #F5F4FA;
+//         margin-bottom: 30px;
+//     }
+// }
 
 .icon-antenna::before {
     background-image: url("../images/antenna.svg");

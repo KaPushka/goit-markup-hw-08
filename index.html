@@ -20,6 +20,12 @@
                     <li class="nav-list__item"><a class="nav-link link" href="#">Контакти</a></li>
                 </ul>
             </nav>
+            <button type="button" class="mobile-menu-btn" data-menu-open>
+                <svg class="mobile-menu-btn__icon" width="40" height="40">
+                    <use href="./images/sprite.svg#burger-menu-icon"></use>
+                </svg>
+            </button>
+            <div class="contact-tablet">
                 <ul class="contacts-list list">
                     <li class="contact-list__link contact-list__mail">
                         <a href="mailto:info@devstudio.com" class="contacts contact-icon link">
@@ -36,6 +42,53 @@
                         </a>
                     </li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="mobile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button type="button" class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__close-icon" width="40" height="40">
+                        <use href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+                
+                <ul class="mobile-menu__nav">
+                    <li class="mobile-menu__nav-list list">
+                        <a href="./index.html" class="mobile-menu__nav-link link current">Студія</a>
+                    </li>
+                    <li class="mobile-menu__nav-list list">
+                        <a href="./portfolio.html" class="mobile-menu__nav-link link">Портфоліо</a>
+                    </li>
+                    <li class="mobile-menu__nav-list list">
+                        <a href="#" class="mobile-menu__nav-link link">Контакти</a>
+                    </li>
+                </ul>
+                
+                <ul class="mobile-menu__contacts">
+                    <li class="mobile-menu__contact-list list">
+                        <a href="tel:+380961111111" class="mobile-menu__number link">+380961111111</a>
+                    </li>
+                    <li class="mobile-menu__contact-list list">
+                        <a href="mailto:info@devstudio.com" class="mobile-menu__mail link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                
+                <ul class="mobile-menu__social">
+                    <li class="mobile-menu__social-list list">
+                        <a href="#" class="mobile-menu__social-link link">Instagram</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="#" class="mobile-menu__social-link link">Twitter</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="#" class="mobile-menu__social-link link">Facebook</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="#" class="mobile-menu__social-link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -48,7 +101,7 @@
         <section class="about-hero section">
             <div class="container">
                 <h2 class="visually-hidden">Переваги та послуги, які надає веб-сайт</h2>
-                <ul class="about-hero list">
+                <ul class="about-hero-list list">
                     <li class="about-hero-card icon-antenna">
                         <h3 class="section-list-title">увага до деталей</h3>
                         <p class="section-list-text">
@@ -83,19 +136,88 @@
                     <li class="about-card">
                         <div class="about-img">
                             <h3 class="about-img-title">десктопні додатки</h3>
-                            <img src="./images/img1.jpg" alt="Робота над версткою" width="370" height="294">
+                            <picture>
+                                <source 
+                                    srcset="./images/retina/index/desktop/img1-desktop.webp 1x, ./images/retina/index/desktop/img1-desktop@2x.webp 2x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp"
+                                />
+                                <source 
+                                    srcset="./images/retina/index/desktop/img1-desktop.jpg 1x, ./images/retina/index/desktop/img1-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                
+                                <source
+                                    srcset="./images/retina/index/tablet/img1-tablet.jpg 1x, ./images/retina/index/tablet/img1-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" 
+                                />
+
+                                <source 
+                                    srcset="./images/retina/index/mobile/img1-mobile.jpg 1x, ./images/retina/index/mobile/img1-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" 
+                                />
+                                
+                                <img src="./images/img1.jpg" alt="Робота над версткою" width="370" height="294">
+
+                            </picture>
+                            
                         </div>
                     </li>
                     <li class="about-card">
                         <div class="about-img">
                             <h3 class="about-img-title">мобільні додатки</h3>
-                            <img src="./images/img2.jpg" alt="Робота над функціоналом застосунку" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="./images/retina/index/desktop/img2-desktop.webp 1x, ./images/retina/index/desktop/img2-desktop@2x.webp 2x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp" 
+                                />
+                                <source 
+                                    srcset="./images/retina/index/desktop/img2-desktop.jpg 1x, ./images/retina/index/desktop/img2-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                
+                                <source
+                                    srcset="./images/retina/index/tablet/img2-tablet.jpg 1x, ./images/retina/index/tablet/img2-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" 
+                                />
+
+                                <source 
+                                    srcset="./images/retina/index/mobile/img2-mobile.jpg 1x, ./images/retina/index/mobile/img2-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" 
+                                />
+                                <img src="./images/img2.jpg" alt="Робота над функціоналом застосунку" width="370" height="294">
+                            </picture>
+
+                        
                         </div>
                     </li>
                     <li class="about-card">
                         <div class="about-img">
                             <h3 class="about-img-title">дизайнерські рішення</h3>
-                            <img src="./images/img3.jpg" alt="Робота над кольоровою гаммою" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="./images/retina/index/desktop/img3-desktop.webp 1x, ./images/retina/index/desktop/img3-desktop@2x.webp 2x"
+                                    media="(min-width: 1200px)" 
+                                    type="image/webp" 
+                                />
+                                <source 
+                                    srcset="./images/retina/index/desktop/img3-desktop.jpg 1x, ./images/retina/index/desktop/img3-desktop@2x.jpg 2x"
+                                    media="(min-width: 1200px)"
+                                />
+                                
+                                <source
+                                    srcset="./images/retina/index/tablet/img3-tablet.jpg 1x, ./images/retina/index/tablet/img3-tablet@2x.jpg 2x" 
+                                    media="(min-width: 768px)" 
+                                />
+
+                                <source 
+                                    srcset="./images/retina/index/mobile/img3-mobile.jpg 1x, ./images/retina/index/mobile/img3-mobile@2x.jpg 2x"
+                                    media="(max-width: 767px)" 
+                                />
+                                <img src="./images/img3.jpg" alt="Робота над кольоровою гаммою" width="370" height="294">
+                            </picture>
+                            
                         </div>
                     </li>
                 </ul>
@@ -106,9 +228,38 @@
                 <h2 class="section-title">Наша команда</h2>
                 <ul class="employees-list list">
                     <li class="employees-card">
-                        <img src="./images/igor.jpg"
-                            alt="Ігор Дем'яненко" width="270" height="260"
-                        >
+                        <picture>
+                            <source
+                                srcset="./images/retina/index/desktop/igor-desktop.webp 1x, ./images/retina/index/desktop/igor-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/desktop/igor-desktop.jpg 1x, ./images/retina/index/desktop/igor-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)"
+                            />
+                            <source
+                                srcset="./images/retina/index/tablet/igor-tablet.webp 1x, ./images/retina/index/tablet/igor-tablet@2x.webp 2x"
+                                media="(min-width: 768px)" 
+                                type="image/webp" 
+                            />
+                            <source
+                                srcset="./images/retina/index/tablet/igor-tablet.jpg 1x, ./images/retina/index/tablet/igor-tablet@2x.jpg 2x" 
+                                media="(min-width: 768px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/mobile/igor-mobile.webp 1x, ./images/retina/index/mobile/igor-mobile@2x.webp 2x"
+                                media="(max-width: 767px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/mobile/igor-mobile.jpg 1x, ./images/retina/index/mobile/igor-mobile@2x.jpg 2x"
+                                media="(max-width: 767px)" 
+                            />
+
+                            <img src="./images/igor.jpg"
+                            alt="Ігор Дем'яненко" width="270" height="260" class="mobile-img">
+                        </picture> 
                         <div class="employees-content-wrapper">
                             <h3 class="section-hero">Ігор Дем'яненко</h3>
                             <p lang="en" class="section-text">Product Designer</p>
@@ -145,9 +296,37 @@
                         </div>
                     </li>
                     <li class="employees-card">
-                        <img src="./images/olga.jpg" 
-                            alt="Ольга Рєпіна" width="270" height="260"
-                        >
+                        <picture>
+                            <source 
+                                srcset="./images/retina/index/desktop/olga-desktop.webp 1x, ./images/retina/index/desktop/olga-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/desktop/olga-desktop.jpg 1x, ./images/retina/index/desktop/olga-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/tablet/olga-tablet.webp 1x, ./images/retina/index/tablet/olga-tablet@2x.webp 2x"
+                                media="(min-width: 768px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/tablet/olga-tablet.jpg 1x, ./images/retina/index/tablet/olga-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/mobile/olga-mobile.webp 1x, ./images/retina/index/mobile/olga-mobile@2x.webp 2x"
+                                media="(max-width: 767px)" 
+                                type="image/webp" />
+                            <source 
+                                srcset="./images/retina/index/mobile/olga-mobile.jpg 1x, ./images/retina/index/mobile/olga-mobile@2x.jpg 2x"
+                                media="(max-width: 767px)" 
+                            />
+                            <img src="./images/olga.jpg" alt="Ольга Рєпіна" width="270" height="260" class="mobile-img">
+                        </picture>
+                         
+                            
                         <div class="employees-content-wrapper">
                            <h3 class="section-hero">Ольга Рєпіна</h3>
                             <p lang="en" class="section-text">Frontend Developer</p> 
@@ -184,9 +363,38 @@
                         </div>   
                     </li>
                     <li class="employees-card">
-                        <img src="./images/mykola.jpg" 
-                            alt="Микола Тарасов" width="270" height="260"
-                        >
+                        <picture>
+                            <source
+                                srcset="./images/retina/index/desktop/mykola-desktop.webp 1x, ./images/retina/index/desktop/mykola-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/desktop/mykola-desktop.jpg 1x, ./images/retina/index/desktop/mykola-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/tablet/mykola-tablet.webp 1x, ./images/retina/index/tablet/mykola-tablet@2x.webp 2x"
+                                media="(min-width: 768px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/tablet/mykola-tablet.jpg 1x, ./images/retina/index/tablet/mykola-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/mobile/mykola-mobile.webp 1x, ./images/retina/index/mobile/mykola-mobile@2x.webp 2x"
+                                media="(max-width: 767px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/mobile/mykola-mobile.jpg 1x, ./images/retina/index/mobile/mykola-mobile@2x.jpg 2x"
+                                media="(max-width: 767px)" 
+                            />
+                            <img src="./images/mykola.jpg" alt="Микола Тарасов" width="270" height="260" class="mobile-img">
+                            
+                        </picture>
+                        
                         <div class="employees-content-wrapper">
                             <h3 class="section-hero">Микола Тарасов</h3>
                             <p lang="en" class="section-text">Marketing</p>
@@ -223,9 +431,38 @@
                         </div>
                     </li>
                     <li class="employees-card">
-                        <img src="./images/misha.jpg" 
-                            alt="Михайло Єрмаков" width="270" height="260"
-                        >
+                        <picture>
+                            <source
+                                srcset="./images/retina/index/desktop/misha-desktop.webp 1x, ./images/retina/index/desktop/misha-desktop@2x.webp 2x"
+                                media="(min-width: 1200px)" 
+                                type="image/webp" 
+                            />
+                            <source
+                                srcset="./images/retina/index/desktop/misha-desktop.jpg 1x, ./images/retina/index/desktop/misha-desktop@2x.jpg 2x"
+                                media="(min-width: 1200px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/tablet/misha-tablet.webp 1x, ./images/retina/index/tablet/misha-tablet@2x.webp 2x"
+                                media="(min-width: 768px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/tablet/misha-tablet.jpg 1x, ./images/retina/index/tablet/misha-tablet@2x.jpg 2x"
+                                media="(min-width: 768px)" 
+                            />
+                            <source
+                                srcset="./images/retina/index/mobile/misha-mobile.webp 1x, ./images/retina/index/mobile/misha-mobile@2x.webp 2x"
+                                media="(max-width: 767px)" 
+                                type="image/webp" 
+                            />
+                            <source 
+                                srcset="./images/retina/index/mobile/misha-mobile.jpg 1x, ./images/retina/index/mobile/misha-mobile@2x.jpg 2x"
+                                media="(max-width: 767px)" 
+                            />
+
+                            <img src="./images/misha.jpg" alt="Михайло Єрмаков" width="270" height="260" class="mobile-img">    
+                        </picture>
+                        
                         <div class="employees-content-wrapper">
                             <h3 class="section-hero">Михайло Єрмаков</h3>
                             <p lang="en" class="section-text">UI Designer</p>
@@ -315,25 +552,27 @@
         </section>
     </main>
     <footer class="footer">
-       <div class="container address-social">
-            <div>
-                <a class="link logo-footer" href="./index.html"><span lang="en">Web<span class="logo-part-footer">Studio</span></span></a>
-                <address>
-                    <ul class="list">
-                        <li class="footer-list-item">
-                            <a href="#" class="address">м. Київ, пр-т Лесі Українки, 26</a>
-                        </li>
-                        <li class="footer-list-item">
-                            <a href="mailto:info@devstudio.com"
-                                class="contacts-footer contacts contact-mail link">info@devstudio.com</a>
-                        </li>
-                        <li class="footer-list-item">
-                            <a href="tel:+380961111111" class="contacts-footer contacts contact-number link">+38 096 111 11 11</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
-            <div class="social-footer">
+       <div class="footer-wrapper container">
+            <div class="container address-social">
+                <div class="contacts-wrapper">
+                    <a class="link logo-footer" href="./index.html"><span lang="en">Web<span
+                                class="logo-part-footer">Studio</span></span></a>
+                    <address>
+                        <ul class="footer-list list">
+                            <li class="footer-list-item">
+                                <a href="#" class="address">м. Київ, пр-т Лесі Українки, 26</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="mailto:info@devstudio.com"
+                                    class="contacts-footer contacts contact-mail link">info@devstudio.com</a>
+                            </li>
+                            <li class="footer-list-item">
+                                <a href="tel:+380961111111" class="contacts-footer contacts contact-number link">+38 096 111 11
+                                    11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
                 <div class="footer-social">
                     <h2 class="footer-title">приєднуйтесь</h2>
                     <ul class="social-list-footer list">
@@ -367,6 +606,8 @@
                         </li>
                     </ul>
                 </div>
+            </div>
+            <div class="subscription-wrapper container">
                 <form name="subscription" class="subscription">
                     <p class="sub-label">підпишіться на розсилку</p>
                     <div class="sub">
@@ -380,7 +621,7 @@
                     </div>
                 </form>
             </div>
-       </div>
+        </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
@@ -431,5 +672,6 @@
         </div>
     </div>
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 </html>

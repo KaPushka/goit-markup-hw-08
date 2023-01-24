@@ -1,5 +1,10 @@
 .social-list-footer {
     display: flex;
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+        margin-bottom: 60px;
+    }
 }
 
 .social-list-footer__item-link {

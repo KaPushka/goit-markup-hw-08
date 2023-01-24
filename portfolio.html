@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/portfolio.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet">
@@ -19,20 +19,25 @@
             <nav class="navigation">
                 <a class="logo link" href="./index.html"><span lang="en">Web<span class="logo_part-header">Studio</span></span></a>
                 <ul class="nav-list list">
-                    <li class="nav-list-item"><a class="nav-link link" href="./index.html">Студія</a></li>
-                    <li class="nav-list-item"><a class="nav-link link current" href="./portfolio.html">Портфоліо</a></li>
-                    <li class="nav-list-item"><a class="nav-link link" href="#">Контакти</a></li>
+                    <li class="nav-list__item"><a class="nav-link link" href="./index.html">Студія</a></li>
+                    <li class="nav-list__item"><a class="nav-link link current" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="nav-list__item"><a class="nav-link link" href="#">Контакти</a></li>
                 </ul>
             </nav>
+            <button class="mobile-menu-btn" data-menu-open>
+                <svg class="mobile-menu-btn__icon" width="40" height="40">
+                    <use href="./images/sprite.svg#burger-menu-icon"></use>
+                </svg>
+            </button>
             <ul class="contacts-list list">
-                <li class="contact-list-link contact-list-mail">
+                <li class="contact-list__link contact-list-mail">
                     <a href="mailto:info@devstudio.com" class="contacts contact-icon link">
                         <svg class="contact-icon-mail">
                             <use href="./images/sprite.svg#email" width="16" height="12"></use>
                         </svg>info@devstudio.com
                     </a>
                 </li>
-                <li class="contact-list-link contact-list-number">
+                <li class="contact-list__link contact-list-number">
                     <a href="tel:+380961111111" class="contacts contact-icon link">
                         <svg class="contact-icon-number">
                             <use href="./images/sprite.svg#smartphone" width="10" height="16"></use>
@@ -42,12 +47,57 @@
             </ul>
         </div>
 
+        <div class="mobile-menu" data-menu>
+            <div class="mobile-menu__container">
+                <button class="mobile-menu__close-btn" data-menu-close>
+                    <svg class="mobile-menu__clse-icon" width="40" height="40">
+                        <use href="./images/sprite.svg#close"></use>
+                    </svg>
+                </button>
+            
+                <ul class="mobile-menu__nav">
+                    <li class="mobile-menu__nav-list list">
+                        <a href="./index.html" class="mobile-menu__nav-link link">Студія</a>
+                    </li>
+                    <li class="mobile-menu__nav-list list">
+                        <a href="./portfolio.html" class="mobile-menu__nav-link link current">Портфоліо</a>
+                    </li>
+                    <li class="mobile-menu__nav-list list">
+                        <a href="#" class="mobile-menu__nav-link link">Контакти</a>
+                    </li>
+                </ul>
+            
+                <ul class="mobile-menu__contacts">
+                    <li class="mobile-menu__contact-list list">
+                        <a href="" class="mobile-menu__number link">+38 096 111 11 11</a>
+                    </li>
+                    <li class="mobile-menu__contact-list list">
+                        <a href="" class="mobile-menu__mail link">info@devstudio.com</a>
+                    </li>
+                </ul>
+                
+                <ul class="mobile-menu__social">
+                    <li class="mobile-menu__social-list list">
+                        <a href="" class="mobile-menu__social-link link">Instagram</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="" class="mobile-menu__social-link link">Twitter</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="" class="mobile-menu__social-link link">Facebook</a>
+                    </li>
+                    <li class="mobile-menu__social-list list">
+                        <a href="" class="mobile-menu__social-link link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </header>
     <main>
         <section class="section">
             <div class="container">
                 <h1 class="visually-hidden">Прихований заголовок</h1>
-                <ul class="gallery-nav-list list">
+                <ul class="gallery-nav list">
                     <li class="gallery-nav-list-item">
                         <button class="gallery-btn-list" type="button">Усі</button>
                     </li>
@@ -66,9 +116,38 @@
                 </ul>
                 <ul class="gallery-list list">
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/techno.jpg" alt="розгорнутий ноутбук" width="370" height:="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/techno-desktop.webp 1x, ./images/retina/portfolio/desktop/techno-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/techno-desktop.jpg 1x, ./images/retina/portfolio/desktop/techno-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/techno-tablet.webp 1x, ./images/retina/portfolio/tablet/techno-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source srcset="./images/retina/portfolio/tablet/techno-tablet.jpg 1x, ./images/retina/portfolio/tablet/techno-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/techno-mobile.webp 1x, ./images/retina/portfolio/mobile/techno-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source srcset="./images/retina/portfolio/mobile/techno-mobile.jpg 1x, ./images/retina/portfolio/mobile/techno-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/techno.jpg" alt="розгорнутий ноутбук" width="370" height:="294" class="gallery-img">
+                                </picture>
+
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
@@ -83,9 +162,40 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/poster.jpg" alt="два баскетболіста" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/poster-desktop.webp 1x, ./images/retina/portfolio/desktop/poster-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/poster-desktop.jpg 1x, ./images/retina/portfolio/desktop/poster-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/poster-tablet.webp 1x, ./images/retina/portfolio/tablet/poster-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/poster-tablet.jpg 1x, ./images/retina/portfolio/tablet/poster-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/poster-mobile.webp 1x, ./images/retina/portfolio/mobile/poster-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/poster-mobile.jpg 1x, ./images/retina/portfolio/mobile/poster-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+
+                                    <img src="./images/poster.jpg" alt="два баскетболіста" width="370" height="294" class="gallery-img">    
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -99,9 +209,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/restourant.jpg" alt="риба" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/restourant-desktop.webp 1x, ./images/retina/portfolio/desktop/restourant-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/restourant-desktop.jpg 1x, ./images/retina/portfolio/desktop/restourant-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/restourant-tablet.webp 1x, ./images/retina/portfolio/tablet/restourant-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/restourant-tablet.jpg 1x, ./images/retina/portfolio/tablet/restourant-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/restourant-mobile.webp 1x, ./images/retina/portfolio/mobile/restourant-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/restourant-mobile.jpg 1x, ./images/retina/portfolio/mobile/restourant-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/restourant.jpg" alt="риба" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -115,9 +255,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/prime.jpg" alt="навушники" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/prime-desktop.webp 1x, ./images/retina/portfolio/desktop/prime-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/prime-desktop.jpg 1x, ./images/retina/portfolio/desktop/prime-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/prime-tablet.webp 1x, ./images/retina/portfolio/tablet/prime-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/prime-tablet.jpg 1x, ./images/retina/portfolio/tablet/prime-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/prime-mobile.webp 1x, ./images/retina/portfolio/mobile/prime-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/prime-mobile.jpg 1x, ./images/retina/portfolio/mobile/prime-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/prime.jpg" alt="навушники" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -131,9 +301,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/boxes.jpg" alt="дві коробки" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/boxes-desktop.webp 1x, ./images/retina/portfolio/desktop/boxes-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/boxes-desktop.jpg 1x, ./images/retina/portfolio/desktop/boxes-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/boxes-tablet.webp 1x, ./images/retina/portfolio/tablet/boxes-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/boxes-tablet.jpg 1x, ./images/retina/portfolio/tablet/boxes-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/boxes-mobile.webp 1x, ./images/retina/portfolio/mobile/boxes-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/boxes-mobile.jpg 1x, ./images/retina/portfolio/mobile/boxes-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/boxes.jpg" alt="дві коробки" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -147,9 +347,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/borders.jpg" alt="монітор комп'єтера" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/borders-desktop.webp 1x, ./images/retina/portfolio/desktop/borders-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/borders-desktop.jpg 1x, ./images/retina/portfolio/desktop/borders-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/borders-tablet.webp 1x, ./images/retina/portfolio/tablet/borders-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/borders-tablet.jpg 1x, ./images/retina/portfolio/tablet/borders-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/borders-mobile.webp 1x, ./images/retina/portfolio/mobile/borders-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/borders-mobile.jpg 1x, ./images/retina/portfolio/mobile/borders-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/borders.jpg" alt="монітор комп'єтера" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -163,9 +393,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/edition.jpg" alt="журнал" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/edition-desktop.webp 1x, ./images/retina/portfolio/desktop/edition-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/edition-desktop.jpg 1x, ./images/retina/portfolio/desktop/edition-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/edition-tablet.webp 1x, ./images/retina/portfolio/tablet/edition-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/edition-tablet.jpg 1x, ./images/retina/portfolio/tablet/edition-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/edition-mobile.webp 1x, ./images/retina/portfolio/mobile/edition-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/edition-mobile.jpg 1x, ./images/retina/portfolio/mobile/edition-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/edition.jpg" alt="журнал" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -179,9 +439,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/lab.jpg" alt="бірка" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/lab-desktop.webp 1x, ./images/retina/portfolio/desktop/lab-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/lab-desktop.jpg 1x, ./images/retina/portfolio/desktop/lab-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/lab-tablet.webp 1x, ./images/retina/portfolio/tablet/lab-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/lab-tablet.jpg 1x, ./images/retina/portfolio/tablet/lab-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/lab-mobile.webp 1x, ./images/retina/portfolio/mobile/lab-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/lab-mobile.jpg 1x, ./images/retina/portfolio/mobile/lab-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/lab.jpg" alt="бірка" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -195,9 +485,39 @@
                         </a>
                     </li>
                     <li class="gallery-card">
-                        <a href="#" class="gallery-card-link link-list">
+                        <a href="#" class="gallery-card-link link">
                             <div class="sliding">
-                                <img src="./images/growing.jpg" alt="ноутбук" width="370" height="294">
+                                <picture>
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/growing-desktop.webp 1x, ./images/retina/portfolio/desktop/growing-desktop@2x.webp 2x"
+                                        media="(min-width: 1200px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/desktop/growing-desktop.jpg 1x, ./images/retina/portfolio/desktop/growing-desktop@2x.jpg 2x"
+                                        media="(min-width: 1200px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/growing-tablet.webp 1x, ./images/retina/portfolio/tablet/growing-tablet@2x.webp 2x"
+                                        media="(min-width: 768px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/tablet/growing-tablet.jpg 1x, ./images/retina/portfolio/tablet/growing-tablet@2x.jpg 2x"
+                                        media="(min-width: 768px)" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/growing-mobile.webp 1x, ./images/retina/portfolio/mobile/growing-mobile@2x.webp 2x"
+                                        media="(max-width: 767px)" 
+                                        type="image/webp" 
+                                    />
+                                    <source
+                                        srcset="./images/retina/portfolio/mobile/growing-mobile.jpg 1x, ./images/retina/portfolio/mobile/growing-mobile@2x.jpg 2x"
+                                        media="(max-width: 767px)" 
+                                    />
+                                    <img src="./images/growing.jpg" alt="ноутбук" width="370" height="294" class="gallery-img">
+                                </picture>
+                                
                                 <div class="sliding-box">
                                     <p class="sliding-text">
                                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi suscipit, iure autem magnam quidem odio? Tempora porro fugit eligendi voluptates, odio culpa quo fuga!
@@ -215,27 +535,28 @@
         </section>
     </main>
 <footer class="footer">
-    <div class="container address-social">
-        <div>
-            <a class="link logo-footer" href="./index.html"><span lang="en">Web<span
-                        class="logo-part-footer">Studio</span></span></a>
-            <address>
-                <ul class="list">
-                    <li class="footer-list-item">
-                        <a href="#" class="address">м. Київ, пр-т Лесі Українки, 26</a>
-                    </li>
-                    <li class="footer-list-item">
-                        <a href="mailto:info@devstudio.com"
-                            class="contacts-footer contacts contact-mail link">info@devstudio.com</a>
-                    </li>
-                    <li class="footer-list-item">
-                        <a href="tel:+380961111111" class="contacts-footer contacts contact-number link">+38 096 111 11
-                            11</a>
-                    </li>
-                </ul>
-            </address>
-        </div>
-        <div class="social-footer">
+    <div class="footer-wrapper container">
+        <div class="container address-social">
+            <div class="contacts-wrapper">
+                <a class="link logo-footer" href="./index.html"><span lang="en">Web<span
+                            class="logo-part-footer">Studio</span></span></a>
+                <address>
+                    <ul class="footer-list list">
+                        <li class="footer-list-item">
+                            <a href="#" class="address">м. Київ, пр-т Лесі Українки, 26</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="mailto:info@devstudio.com"
+                                class="contacts-footer contacts contact-mail link">info@devstudio.com</a>
+                        </li>
+                        <li class="footer-list-item">
+                            <a href="tel:+380961111111" class="contacts-footer contacts contact-number link">+38 096 111
+                                11
+                                11</a>
+                        </li>
+                    </ul>
+                </address>
+            </div>
             <div class="footer-social">
                 <h2 class="footer-title">приєднуйтесь</h2>
                 <ul class="social-list-footer list">
@@ -269,6 +590,8 @@
                     </li>
                 </ul>
             </div>
+        </div>
+        <div class="subscription-wrapper container">
             <form name="subscription" class="subscription">
                 <p class="sub-label">підпишіться на розсилку</p>
                 <div class="sub">
@@ -284,6 +607,7 @@
         </div>
     </div>
 </footer>
+<script src="./js/menu.js"></script>
 </body>
 
 </html>
