@@ -11,6 +11,36 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @media screen and (max-width: 767px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/mobile/header-mobile.jpg');
+        
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/mobile/header-mobile@2x.jpg');
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/tablet/header-tablet.jpg');
+        
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/tablet/header-tablet@2x.jpg');
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/desktop/header-desktop.jpg');
+        
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)), url('../images/retina/index/desktop/header-desktop@2x.jpg');
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -21,8 +51,8 @@
     }
     
 }
-@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    .hero-section {
-        background-image: url('../images/retina/index/desktop/header-desktop@2x.jpg');
-    }
-}
+// @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+//     .hero-section {
+//         background-image: url('../images/retina/index/desktop/header-desktop@2x.jpg');
+//     }
+// }

@@ -149,7 +149,13 @@
         }
     }
 }
-
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .contact-list__link {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+}
 @media screen and (min-width: 1200px) {
     .contacts-list {
         display: flex;

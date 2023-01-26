@@ -2,6 +2,12 @@
     @include font (18px, 500, 36px);
     color: var(--primary-color);
     margin-bottom: 4px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        
+        @include font (18px, 700, 36px)
+        
+    }
 }
 
 .project-text {

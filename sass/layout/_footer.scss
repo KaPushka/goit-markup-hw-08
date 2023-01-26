@@ -2,12 +2,9 @@
     background-color: var(--bg-color);
     padding-top: 60px;
     padding-bottom: 60px;
-
-    // @media screen and (min-width: 1200px) {
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: baseline;
-    // }
+}
+.contacts-footer {
+    font-style: normal;
 }
 
 
@@ -38,6 +35,11 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .footer-list-item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
     .footer-wrapper {
         display: flex;
     }

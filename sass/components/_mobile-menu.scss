@@ -1,5 +1,5 @@
 .mobile-menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -7,7 +7,8 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    overflow: auto;
+    z-index: 1;
+    // overflow: auto;
     background-color: #fff;
     transition: opacity 250ms var(--timing-function), visibility 250ms var(--timing-function);
 
@@ -43,6 +44,7 @@
     border: none;
     cursor: pointer;
     line-height: 0;
+    transition: fill 250ms var(--timing-function);
 
     &:hover {
         fill: var(--button-bg-color);
@@ -58,7 +60,7 @@
 }
 
 .mobile-menu__nav-list {
-    padding-left: 25px;
+
 
 
     &:not(:last-child) {
