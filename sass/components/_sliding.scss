@@ -10,7 +10,7 @@
     transition: transform 250ms var(--timing-function);
 
     .gallery-card:hover & {
-        transform: translateY(-295px);
+        transform: translateY(-294px);
 
         @media screen and (max-width: 767px) {
             transform: translateY(-290px);

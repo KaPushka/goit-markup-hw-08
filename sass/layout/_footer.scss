@@ -10,6 +10,11 @@
 
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+    .footer-list-item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
     .address-social {
         display: flex;
         margin-bottom: 60px;
@@ -24,7 +29,11 @@
         display: block;
         text-align: center;
     }
-
+.footer-list-item {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
     .footer-social {
         
         margin-left: 165px;

@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 600px;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -89,8 +89,7 @@
 
 .mobile-menu__contacts {
     display: block;
-    padding-left: 25px;
-    margin-top: 306px;
+    margin-top: 100px;
 }
 
 .mobile-menu__number {
@@ -110,7 +109,7 @@
 
 .mobile-menu__social {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
     

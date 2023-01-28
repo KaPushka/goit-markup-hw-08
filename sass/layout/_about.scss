@@ -1,8 +1,4 @@
-@media screen and (max-width: 1199px) {
-    .about-section {
-        display: none;
-    }
-}
+
 
 @media screen and (min-width: 1200px) {
     .about-section {
@@ -41,7 +37,11 @@
         background-color: rgba(47, 48, 58, 0.8);
     }
 }
-
+@media screen and (max-width: 1199px) {
+    .about-section {
+        display: none;
+    }
+}
 
 // .about-section {
 //     padding-top: 0;
