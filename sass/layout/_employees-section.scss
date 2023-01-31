@@ -37,15 +37,14 @@
 
 @media screen and (min-width: 1200px) {
     .employees-list {
-        margin-left: -30px;
-        margin-right: -30px;
+        margin-left: -15px;
         flex-wrap: nowrap;
     }
 
     .employees-card {
         
-        flex-basis: calc((100% - 120px)/4);
-        margin-left: 30px;
+        flex-basis: calc((100% - 8 * 15px)/4);
+        margin-left: 15px;
     }
 
     .mobile-img {

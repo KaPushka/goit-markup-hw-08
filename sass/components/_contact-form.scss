@@ -9,11 +9,15 @@
         @include font (20px, 700, 30px)
     }
 
-    @media screen and (max-width: 767px) {
-        width: 370px;
-    }
+    // @media screen and (max-width: 767px) {
+    //     width: 370px;
+    // }
 }
-
+// @media screen and (min-width: 480px) {
+//     .contact-form {
+//         width: 470px;
+//     }
+// }
 .contact-form-field {
     display: block;
 }
@@ -39,9 +43,9 @@
         border-color: var(--hover-focus-btn-bg-color);
     }
 
-    @media screen and (max-width: 767px) {
-        width: 370px;
-    }
+    // @media screen and (max-width: 767px) {
+    //     width: 370px;
+    // }
 }
 
 .contact-form-input-wrapper {
@@ -85,9 +89,9 @@
         color: rgba(117, 117, 117, 0.5);
     }   
 
-    @media screen and (max-width: 767px) {
-        width: 370px;
-    }
+    // @media screen and (max-width: 767px) {
+    //     width: 370px;
+    // }
 }
 
 .contact-form-checkbox-wrapper {
@@ -140,9 +144,18 @@
             outline: 2px solid rgba(0, 0, 255, 0.5);
         }
     }
-
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @include font (12px, 400, 14px);
+    }
+    @media screen and (min-width: 1200px) {
+        @include font (14px, 400, 24px);
+    }
     @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
         @include font (12px, 400, 14px)
+
     }
 }
 
@@ -151,8 +164,15 @@
     @include font (14px, 400, 24px);
     letter-spacing: 0.03em;
     color: #2196F3;
-
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @include font (12px, 400, 14px);
+    }
+    @media screen and (min-width: 1200px) {
+        @include font (14px, 400, 24px);
+    }
     @media screen and (max-width: 767px) {
+        margin-left: auto;
+        margin-right: auto;
         @include font (12px, 400, 14px)
     }
 }
@@ -181,10 +201,6 @@
 
 @media screen and (max-width: 1199px) {}
 
-@media screen and (max-width: 767px) {
-    .contact-form {
-        width: 470px;
-    }
-}
+
 
 @media screen and (max-width: 479px) {}   

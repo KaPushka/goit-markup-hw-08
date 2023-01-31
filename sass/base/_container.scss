@@ -8,6 +8,7 @@
 // 480px+
 @media screen and (min-width: 480px) {
     .container {
+        max-width: 480px;
         margin-left: auto;
         margin-right: auto;
     }
@@ -16,6 +17,7 @@
 // 768px+
 @media screen and (min-width: 768px) {
     .container {
+        max-width: 768px;
         padding-top: 0;
         padding-bottom: 0;
     }
