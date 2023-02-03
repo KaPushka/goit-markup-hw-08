@@ -42,10 +42,15 @@
         }
     }
 }
-
+@media screen and (max-width: 1199px) {
+    .hero-section {
+        height: 400px;
+        padding: 118px 0;
+    }
+}
 @media screen and (max-width: 767px) {
     .hero-section {
-        padding: 120px 0;
+        padding: 118px 0;
         height: 400px;
         max-width: 768px;
     }

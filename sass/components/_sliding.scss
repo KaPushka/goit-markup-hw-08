@@ -5,15 +5,18 @@
 
 .sliding-box {
     position: absolute;
-    width: 370px;
-    height: 294px;
+    width: 100%;
+    height: 100%;
     transition: transform 250ms var(--timing-function);
 
     .gallery-card:hover & {
         transform: translateY(-294px);
 
         @media screen and (max-width: 767px) {
-            transform: translateY(-290px);
+            transform: translateY(-294px);
+        }
+        @media screen and (max-width: 479px) {
+            transform: translateY(-190px);
         }
     }
 
@@ -31,7 +34,13 @@
     background: rgba(33, 150, 243, 0.9);
 
     @media screen and (max-width: 767px) {
-        width: 442px;
-        height: 357px;
+        width: 450px;
+        height: 100%;
+    }
+    @media screen and (max-width: 479px) {
+        width: 100%;
+        padding-top: 20px;
+        height: 100%;
+        font-size: 15px;
     }
 }

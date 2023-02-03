@@ -29,10 +29,15 @@
 
 .mobile-menu__container {
     position: relative;
+    width: 480px;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 48px;
     padding-bottom: 48px;
+
+    @media screen and (max-width: 479px) {
+        width: auto;
+    }
 }
 
 .mobile-menu__close-btn {
@@ -71,7 +76,6 @@
 
 .mobile-menu__nav-link {
     font-weight: 500;
-    display: block;
     cursor: pointer;
     color: var(--logo-secondary-color);
     @include font (40px, 500, 47px);
@@ -86,22 +90,23 @@
         color: var(--button-bg-color);
     }
 }
-
+.mobile-menu__contact-list {
+    margin-bottom: 32px;
+}
 .mobile-menu__contacts {
     display: block;
     margin-top: 60px;
+    margin-bottom: 64px;
+
 }
 
 .mobile-menu__number {
-    display: block;
-    margin-bottom: 32px;
+    
     @include font (34px, 500, 40px);
     color: var(--button-bg-color);
 }
 
 .mobile-menu__mail {
-    display: block;
-    margin-bottom: 64px;
     @include font (24px, 500, 28px);
     letter-spacing: 0.02em;
     color: #757575;
@@ -133,6 +138,7 @@
     border: none;
     cursor: pointer;
     line-height: 0;
+    transition: fill 250ms var(--timing-function);
 
     &:hover {
         fill: var(--button-bg-color);

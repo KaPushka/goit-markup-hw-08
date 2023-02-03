@@ -6,7 +6,9 @@
 // }
 
 .gallery-card-link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     transition: box-shadow 250ms var(--timing-function);
 
     &:hover,
